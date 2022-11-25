@@ -1,0 +1,12 @@
+body{
+    background-color: lightblue;
+    font-size: larger;
+}
+a.nodec {text-decoration: wavy;}
+a:hover {color:turquoise}
+li em{font-weight: bolder;}
+p {color:royalblue}
+.super {position: relative; top: -1ex;}
+.sub {position: relative; bottom: -1ex;}
+
+

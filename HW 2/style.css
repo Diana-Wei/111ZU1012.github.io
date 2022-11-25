@@ -1,0 +1,8 @@
+body{
+    background-color: cornsilk;
+    font-size: larger;
+}
+a.nodec {text-decoration: wavy;}
+a:hover {color:rosybrown}
+li em{font-weight: bolder;}
+p {color:darkgoldenrod}

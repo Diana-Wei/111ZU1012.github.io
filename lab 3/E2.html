@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>11/25 Exercise </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1{border-style: dotted;}
+        p{padding-top: 30px;
+            padding-right: 50px;
+            padding-left: 20px;
+            padding-bottom: 40px;}
+        div{margin-top: 60px;
+            margin-bottom: 60px;
+            margin-right: 50px;
+            margin-left: 50px;
+            background-color: bisque;}
+        .floated{background-color: lightgoldenrodyellow;
+        padding: 0.5em;
+        text-align: right;}
+        img{float: right;
+        margin-top: 100px
+        }
+    </style>
+</head>
+<body>
+	<h1>Feedback Form</h1>
+    <img src ="C.png" width="30%" height="30%"/>
+	<p>Please fill out this form to help us improve our site.</p>
+	<p>Name: </p>
+	<form method = "post" action = "http://www.deitel.com">
+		<label><input name = "name" type = "text" size ="25" maxlength="40">
+		</label>
+	<p>Comments: </p>
+		<textarea rows="5" cols="50">Enter comments here.</textarea>
+	<p>E-mail Address: </p>
+		<label><input E-mail = "E-mail" type = "text" size ="25" maxlength="70">
+		</label>
+		<br>
+	<p>Things you liked: </p>
+	<form action="action_page.php" method="get">
+		<input type="checkbox" name="preferences" value="Site design">Site design
+		<input type="checkbox" name="preferences" value="Links">Links
+		<input type="checkbox" name="preferences" value="Ease of use">Ease of use
+		<input type="checkbox" name="preferences" value="Images">Images
+		<input type="checkbox" name="preferences" value="Sourse code">Sourse code
+
+	<p>How did you get to our site: </p>
+		<form>
+			<input type="radio" name="access" value="Search engine">Search engine<br>
+			<input type="radio" name="access" value="Links from another site">Links from another site<br>
+			<input type="radio" name="access" value="Deitel.com website">Deitel.com website<br>
+			<input type="radio" name="access" value="Reference in a book">Reference in a book<br>
+			<input type="radio" name="access" value="Other">Other<br>
+		</form>
+	<p>Rate our site: </p>
+		<form action="/action_page.php">
+			<select name="rate">
+				<option value="Amazing">Amazing</option>
+				<option value="Good">Good</option>
+				<option value="About average">About average</option>
+				<option value="Not so good">Not so good</option>
+				<option value="Disappointing">Disappointing</option>
+			</select>
+		</form>
+	<br><br>
+	<input type="submit" value="submit">
+	<input type="reset" value="clear">
+</body>
+</html>

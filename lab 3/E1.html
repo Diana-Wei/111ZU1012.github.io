@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style type="text/css">
-        .intro{background-color: bisque;}
-        #appt{background-color: rosybrown;}
-		body{
-			background-color: beige;
-		}
-
-		h1{color: brown;
-			margin-top: 40px
-			font-family:"Courier New";}
-		p{font-size: 10pt;
-			
-  		font-family:monospace;
-		}
-		label{font-family:"Lucida Handwriting";
-            text-decoration: overline;}
-	</style>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>11/18 Exercise 2</title>
+	<title>11/25 Exercise</title>
+    <link rel="stylesheet" href="style.css">
+    <style>body{background-image: url('B.png')}
+    </style>
 </head>
 <body>
-    <a href="file:///C:/Users/USER/Documents/GitHub/111ZU1012.github.io/Class1_CSS_HW_111ZU1012.html"></a>
 	<h1>
 		New HTML5 Input Types Demo
 	</h1>
 	<p>
-		This form demonstrates the new HTML5 and the placeholder, required and auto focus attributes.
+		Please<span class="super"> fill out this form.</span>
 	</p>
 	<label>Color: </label>
 		<input type = "color" autofocus/>
-		<p>(Hexadecimal code such as #ADD8E6)</p>
+		(Hexadecimal code such as #ADD8E6)<p></p>
 
-	<label>Date: </label>
+	</label>Date: </label>
 	<form action="/action_page.php">
 		<input type="date" id="date" name="date"><p></p>
 	</form>
 
 	<form>
-		<label>E-mail:  </label>
+		</label>E-mail:  </label>
 		<input type="email" name="name" placeholder="name@domain.com" required><p></p>
 	</form>
 
@@ -55,12 +40,12 @@
 	</form>
 
 	<form action="/action_page.php">
-		<label>Search</label>
+		</label>Search</label>
 		<input type="search" id="search2" name="search2" placeholder="search Query"><p></p>
 	</form>
 
 	<form action="/action_page.php">
-		<label for="appt">Time: (hh:mm)</label>
+		<label for="appt">Time:(hh:mm)</label>
 		<input type="time" id="appt" name="appt"><p></p>
 	</form>
 
