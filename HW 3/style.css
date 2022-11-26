@@ -1,0 +1,13 @@
+body{
+    background-color:lemonchiffon;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+li em{font-weight: bolder;
+}
+p {color:darkgoldenrod
+}
+#right{margin-right:10%}
+#left{margin-left:10%}
