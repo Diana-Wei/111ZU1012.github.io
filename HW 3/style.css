@@ -9,5 +9,5 @@ li em{font-weight: bolder;
 }
 p {color:darkgoldenrod
 }
-#right{margin-right:10%}
-#left{margin-left:10%}
+#right{margin-right:auto}
+#left{margin-left:auto}

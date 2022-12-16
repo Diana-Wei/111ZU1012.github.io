@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>12/16 Javascript</title>
+</head>
+<body>
+	<script type="text/Javascript">
+		
+		var a;var b;
+		a = window.prompt("Enter first input:")
+		b = window.prompt("Enter second input:")
+        x=parseInt(a)
+        y=parseInt(b)
+        if(x>y){
+            document.body.style.backgroundColor='lightblue';
+            document.writeln(a+">"+b);
+        }
+        else if(x<y){
+            document.body.style.backgroundColor='lightgreen';
+            document.writeln(a+"<"+b);
+        }
+        else{
+            document.body.style.backgroundColor='lightyellow';
+            document.writeln(a+"="+b);
+        }
+
+		//document.writeln("<h1>The sum is "+(parseInt(a)+parseInt(b)));
+		//var name;
+		//name = window.prompt("Please enter your name:")
+		//document.writeln("<h1>Hello "+name+", welcome to JavaScript Programming");
+	</script>
+	<input type="button" value="1 item" onClick="document.writeln(x);">
+	<input type="button" value="2 item" onClick="document.writeln(y);">
+
+	<!---<input type="button" value="1" onClick="alert('muahaha')">
+	<input type="button" value="ivory" onClick="document.body.style.backgroundColor='ivory';">
+	<input type="button" value="beige" onClick="document.body.style.backgroundColor='beige';">
+	<input type="button" value="1" onClick="alert('first alert')">--->
+
+</body>
+</html>
