@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HW4 Javascript</title>
+</head>
+<body>
+	<script type="text/Javascript">
+
+		ans = window.prompt("Enter a number between 1-10:");
+		var rand=Math.floor((Math.Random()*10)+1;);
+		
+		if (parseInt(rand) < parseInt(ans)) {
+            window.prompt("Please try again: (Hint: 1-"+ans+")");
+        }
+        else if (parseInt(rand) > parseInt(ans)) {
+            window.prompt("Please try again: (Hint: "+ans+"-10)");
+        }
+        else (parseInt(rand) == parseInt(ans)) {
+            window.prompt("Bingo!");
+        }
+	
+	</script>
+
+
+</body>
+</html>
