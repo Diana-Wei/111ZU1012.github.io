@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>12/23 Javascript</title>
+</head>
+<body>
+    <script type="text/Javascript">
+        var name;
+        var now = new Date();
+        var hour = now. getHours();
+
+        name = window.prompt("Plz enter your name: ");
+        if (hour<12)
+        {
+            document.write("Guten Morgen! "+name);
+        }
+        if (hour>=12)
+        {
+            hour = hour-12
+            if (hour<6)
+            {
+            document.write("Guten Tag! "+name);
+            }
+            if (hour>=6)
+            {
+            document.write("Guten Abent! "+name);
+            }
+        }
+
+    </script>
+</body>
+</html>

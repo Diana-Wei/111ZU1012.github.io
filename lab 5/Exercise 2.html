@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>12/23 Javascript</title>
+    <style type="text/css">
+        img{margin-right:20px}
+        table{wigth: 200px;
+        background-color: antiquewhite;}
+        table, td, th{border: 2px solid black;
+                        padding: 3px;}
+        th           {color: beige;
+                      background-color: rosybrown;}
+                      
+    </style>
+</head>
+<body>
+    <p><img id ="die1" src = "die1.png" alt = "dice">
+        <img id ="die2" src = "die1.png" alt = "dice">
+        <img id ="die3" src = "die1.png" alt = "dice">
+        <img id ="die4" src = "die1.png" alt = "dice">
+        <img id ="die5" src = "die1.png" alt = "dice">
+        <img id ="die6" src = "die1.png" alt = "dice"></p>
+    <p><img id ="die7" src = "die1.png" alt = "dice">
+        <img id ="die8" src = "die1.png" alt = "dice">
+        <img id ="die9" src = "die1.png" alt = "dice">
+        <img id ="die10" src = "die1.png" alt = "dice">
+        <img id ="die11" src = "die1.png" alt = "dice">
+        <img id ="die12" src = "die1.png" alt = "dice"></p>
+    <form action ="#">
+        <input id = "rollButton" type = "button" value = "Roll the dice">
+    </form>
+    <div id = "frequencyTableDiv"></div>
+
+    <script type="text/Javascript">
+        var f1=0;
+        var f2=0;
+        var f3=0;
+        var f4=0;
+        var f5=0;
+        var f6=0;
+        var total=0;
+        var denominator=0;
+
+    
+        function start()
+        {
+            var button = document.getElementById("rollButton");
+            button.addEventListener("click",rollDice, false);
+            die1img = document.getElementById("die1");
+            die2img = document.getElementById("die2");
+            die3img = document.getElementById("die3");
+            die4img = document.getElementById("die4");
+            die5img = document.getElementById("die5");
+            die6img = document.getElementById("die6");
+            
+        }
+        
+        function rollDice()
+        {
+            var result;
+            for (var i=1; i<=12; ++i)
+            {
+                result=Math.floor(1+Math.random()*6);
+                setImage(i, result);
+                tallyRolls(result);
+                ++total;
+            }
+            updateFrequencyTable();
+        }
+        function setImage(dieNum, result)
+        {
+            var dieImg = document.getElementById("die"+dieNum);
+            dieImg.setAttribute("src","die"+result+".png");
+            dieImg.setAttribute("alt","die with "+result+"spot(s)");
+        }
+
+        function tallyRolls(result)
+        {
+            switch(result)
+            {
+                case 1:
+                    ++f1;
+                    deniminator=f1+f2+f3+f4+f5+f6;
+                    break;
+
+                case 2:
+                    ++f2;
+                    deniminator=f1+f2+f3+f4+f5+f6;
+                    break;
+
+                case 3:
+                    ++f3;
+                    deniminator=f1+f2+f3+f4+f5+f6;
+                    break;
+
+                case 4:
+                    ++f4;
+                    deniminator=f1+f2+f3+f4+f5+f6;
+                    break;
+
+                case 5:
+                    ++f5;
+                    deniminator=f1+f2+f3+f4+f5+f6;
+                    break;
+
+                case 6:
+                    ++f6;
+                    deniminator=f1+f2+f3+f4+f5+f6;
+                    break;
+            }
+        }
+    
+        function updateFrequencyTable()
+        {
+            var tableDiv = document.getElementById("frequencyTableDiv");
+            tableDiv.innerHTML ="<table>"+
+                                "<thead><th>Result</th><th>Frequency</th>"+
+                                "<th>Percent</th></thead>"+
+                                "<tbody><tr><td>1</td> <td>"+f1+"</td><td>"+
+                                    Math.floor((f1/deniminator)*100)+"%"+"</td></tr>"+
+                                    "<tr><td>2</td> <td>"+f2+"</td><td>"+
+                                    Math.floor((f2/deniminator)*100)+"%"+"</td></tr>"+
+                                    "<tr><td>3</td> <td>"+f3+"</td><td>"+
+                                    Math.floor((f3/deniminator)*100)+"%"+"</td></tr>"+
+                                    "<tr><td>4</td> <td>"+f4+"</td><td>"+
+                                    Math.floor((f4/deniminator)*100)+"%"+"</td></tr>"+
+                                    "<tr><td>5</td> <td>"+f5+"</td><td>"+
+                                    Math.floor((f5/deniminator)*100)+"%"+"</td></tr>"+
+                                    "<tr><td>6</td> <td>"+f6+"</td><td>"+
+                                    Math.floor((f6/deniminator)*100)+"%"+"</td></tr>"+
+                                "</tbody></tables>";
+        }
+        window.addEventListener("load", start, false);
+    </script>
+</body>
+</html>
