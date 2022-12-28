@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>12/29 Javascript HW</title>
+</head>
+<body>
+    <div id="block">
+        <h2 class="header">JS Calculator</h2>
+        <form>
+            <p><label>Number 1</label>
+            <input type="number" id="n1" class="input_box"></p>
+            <p><label>Number 2</label>
+            <input type="number" id="n2" class="input_box"></p>
+            <p><label>Calculation</label>
+            <select id="function" name="method">
+                <option value="0" selected>Please select a function:</option>
+                <option value="1">Add</option>
+                <option value="2">Subtract</option>
+                <option value="3">Multiply</option>
+                <option value="4">Divide</option>
+            </select></p>
+        </form>
+    
+        <input type="button" value="count" class="cal_button" onClick="calculator()">
+        <p>Result: <span id="result"></span> </p>
+        
+    </div>
+	<script type="text/Javascript">
+	    
+        function calculator(){
+
+        var n1 = parseInt(document.getElementById('num1').value);
+        var n2 = parseInt(document.getElementById('num2').value);
+        var f = parseInt(document.getElementById('function').value);
+        var result = parseInt(document.getElementById('result').value);
+        
+
+            if (f==1){
+                document.getElementById('result').innerHTML = nadd(n1,n2);
+                }else if (f==2){
+                document.getElementById('result').innerHTML = nsubtract(n1,n2);
+                }else if (f==3){
+                document.getElementById('result').innerHTML = nmultiply(n1,n2);
+                }else if (f==4){
+                document.getElementById('result').innerHTML = ndivide(n1,n2);
+                }else{
+                document.getElementById('result').innerHTML = "Please choose a function";
+            }
+        }
+
+        function add(num1,num2){
+            return num1 + num2;
+        }
+
+        function subtract(num1,num2){
+            return num1 - num2;
+        }
+
+        function multiply(num1,num2){
+            return num1 * num2;
+        }
+
+        function divide(num1,num2){
+            return num1 / num2;
+        }
+	</script>
+	
+</body>
+</html>
